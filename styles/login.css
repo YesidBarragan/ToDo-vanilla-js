@@ -63,13 +63,27 @@ button {
   padding: .3em 2em;
   background-color: var(--primary);
   color: white;
-  margin-top: 5em;
+  margin-top: 2em;
   font-weight: 400;
   font-size: 1em;
+}
+
+button.btn-2 {
+  background-color: var(--secondary);
 }
 
 .form-footer {
   margin-top: auto;
   color: grey;
   font-size: 2em;
+}
+
+small.incorrect-email {
+  color: red;
+  visibility: hidden;
+}
+
+small.incorrect-password {
+  color: red;
+  visibility: hidden;
 }

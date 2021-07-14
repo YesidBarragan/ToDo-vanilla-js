@@ -41,4 +41,30 @@ function renderizarTodos() {
     })
 }
 
-renderizarTodos()
+function fechaDeHoy() {
+    let today = new Date();
+    const dateOptions = {
+        day: "numeric",
+        month: "numeric",
+        year: "2-digit"
+    }
+    return today.toLocaleDateString("es-AR", dateOptions)
+}
+
+let formNuevaTarea = document.querySelector("#nueva-tarea");
+renderizarTodos();
+
+formNuevaTarea.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let textoNuevaTarea = document.querySelector("#texto-nueva-tarea").value;
+    let nuevaTarea = {};
+    if (textoNuevaTarea != "") {
+        nuevaTarea.description = textoNuevaTarea;
+        nuevaTarea.createdAt = fechaDeHoy();
+    }
+    tareasPendientes.innerHTML = "";
+    listadoTodos.push(nuevaTarea);
+    renderizarTodos();
+    formNuevaTarea.reset();
+})
+

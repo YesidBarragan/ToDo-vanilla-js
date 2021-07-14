@@ -10,29 +10,37 @@
 <body>
 
   <form>
-    <h1>Log In</h1>
+    <h1>Nueva cuenta</h1>
 
     <div class="image"></div>
 
     <label>
-      Email: <small class="incorrect-email">El usuario no existe</small>
+      Nombre:
+      <input type="text" id="nombre">
+    </label>
+    <label>
+      Apellido:
+      <input type="text" id="apellido">
+    </label>
+    <label>
+      Email:
       <input type="text" id="email">
     </label>
     <label>
-      Contraseña: <small class="incorrect-password">Contraseña incorrecta</small>
+      Contraseña:
       <input type="password" id="password">
     </label>
 
-    <button>Iniciar Sesión</button>
-
-    <button class="btn-2" id="btnCrearCuenta">Crear Cuenta</button>
+    <button>Crear Cuenta</button>
+    
+    <button class="btn-2" id="btnIniciarSesion">Iniciar Sesión</button>
 
     <div class="form-footer">
       <p>ToDo</p>
     </div>
   </form>
   
-  <script src="scripts/logIn.js"></script>
+  <script src="scripts/signUp.js"></script>
 
 </body>
 </html>
