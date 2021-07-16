@@ -23,8 +23,8 @@ a {
   color: rgb(223, 223, 223);
 }
 
-.user-info p {
-  text-transform: capitalize;
+p.user-name {
+  text-transform: lowercase;
 }
 
 .user-info .user-image {
